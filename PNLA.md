@@ -39,11 +39,13 @@ s1.size
 
 # Create series from List 
 s0 = pd.Series([1,2,3],index = ['a','b','c'])
+
 s0
 
 dtype: int64
 # Modifying index in Series
 s1.index = ['a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g']
+
 s1
 
 dtype: int32
@@ -60,6 +62,7 @@ v2 , ind2 , s
 # Creating Series from Dictionary
 dict1 = {'a1' :10 , 'a2' :20 , 'a3':30 , 'a4':40}
 s3 = pd.Series(dict1)
+
 s3
 
 dtype: int64
@@ -107,9 +110,11 @@ s[-3:-1]
 dtype: float64
 Append Series
 s2 = s1.copy()
+
 s2
 
 dtype: int32
+
 s3
 
 dtype: int64
@@ -119,14 +124,17 @@ s4
 
 dtype: int64
 # When "inplace=False" it will return a new copy of data with the operation performed
+
 s4.drop('a4' , inplace=False)
 
 dtype: int64
+
 s4
 
 dtype: int64
 # When we use "inplace=True" it will affect the dataframe
 s4.drop('a4', inplace=True)
+
 s4
 
 dtype: int64
@@ -142,14 +150,18 @@ dtype: int64
 
 
 # Import Numpy Library
-import numpy as np
+import numpy as np 
+
 import warnings
+
 warnings.filterwarnings("ignore")
+
 from IPython.display import Image
 
 
 Numpy Array Creation
 list1 = [10,20,30,40,50,60]
+
 list1
 
 # Display the type of an object
@@ -157,31 +169,42 @@ type(list1)
 list
 #Convert list to Numpy Array
 arr1 = np.array(list1)
+
 arr1
+
 array([10, 20, 30, 40, 50, 60])
 #Memory address of an array object
+
 arr1.data
 
 # Display type of an object
 type(arr1)
+
 numpy.ndarray
 #Datatype of array
+
 arr1.dtype
+
 dtype('int32')
 # Convert Integer Array to FLOAT
+
 arr1.astype(float)
 
 # Generate evenly spaced numbers (space =1) between 0 to 10
+
 np.arange(0,10)
 
 # Generate numbers between 0 to 100 with a space of 10
+
 np.arange(0,100,10)
 
 # Generate numbers between 10 to 100 with a space of 10 in descending order
+
 np.arange(100, 10, -10)
 
 #Shape of Array
 arr3 = np.arange(0,10)
+
 arr3.shape
 
 arr3
@@ -212,6 +235,7 @@ np.repeat(10,5)
 
 # Repeat each element in array 'a' thrice
 a= np.array([10,20,30])
+
 np.repeat(a,3)
 
 # Array of 10's
@@ -219,10 +243,12 @@ np.full(5,10)
 
 # Generate array of Odd numbers
 ar1 = np.arange(1,20)
+
 ar1[ar1%2 ==1]
 
 # Generate array of even numbers
 ar1 = np.arange(1,20)
+
 ar1[ar1%2 == 0]
 
 # Generate evenly spaced 4 numbers between 10 to 20.
@@ -250,7 +276,9 @@ np.random.randint(0,500,10)
 
 
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 from mpl_toolkits.mplot3d import Axes3D
 
 
@@ -261,6 +289,7 @@ v ,u
 type(v)
 
 w = np.array([9,5,7])
+
 type(w)
 
 w.shape[0]
@@ -270,6 +299,7 @@ w.shape
 
 # Reading elements from an array
 a = np.array([7,5,3,9,0,2])
+
 a[0]
 
 a[1:]
@@ -298,24 +328,38 @@ plt.plot([0,v[0]] , [0,v[1]])
 # Plot 2D Vector
 
 plt.plot([0,v[0]] , [0,v[1]])
+
 plt.plot([8,-8] , [0,0] , 'k--')
+
 plt.plot([0,0] , [8,-8] , 'k--')
+
 plt.grid()
+
 plt.axis((-8, 8, -8, 8))
+
 plt.show()
 
 
 # Plot 3D Vector
 
 fig = plt.figure()
+
 ax = Axes3D(fig)
+
 ax.plot([0,u[0]],[0,u[1]],[0,u[2]])
+
 plt.axis('equal')
+
 ax.plot([0, 0],[0, 0],[-5, 5],'k--')
+
 ax.plot([0, 0],[-5, 5],[0, 0],'k--')
+
 ax.plot([-5, 5],[0, 0],[0, 0],'k--')
+
 plt.show()
+
 s4 = s4.append(pd.Series({'a4': 7}))
+
 s4
 
 dtype: int64
