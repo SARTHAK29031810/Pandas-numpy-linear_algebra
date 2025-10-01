@@ -9,8 +9,6 @@ import re
 import math
 import warnings
 warnings.filterwarnings("ignore")
-Series
-Create Series
 # Create series from Nump Array
 v = np.array([1,2,3,4,5,6,7])
 s1 = pd.Series(v)
