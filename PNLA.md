@@ -343,4 +343,3 @@ s4 = s4.append(pd.Series({'a4': 7}))
 
 s4
 
-dtype: int64
