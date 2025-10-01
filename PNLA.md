@@ -1,4 +1,4 @@
-# PANDAS (17/09/25) 
+# PANDAS 
 
 ```
 import numpy as np
@@ -136,7 +136,7 @@ dtype: int64
 
 
 
-# NumPy (17/09/25) 
+# NumPy 
 
 
 
@@ -244,7 +244,7 @@ np.random.randint(0,500,10)
 
 
 
-# Linear Algebra (17/09/25) 
+# Linear Algebra  
 
 
 
